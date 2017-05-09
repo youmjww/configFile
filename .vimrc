@@ -1,8 +1,9 @@
-"filePath ~/.vimrc
-
+" 行番号の表示
 set number
+" タイトルバーにファイル名を表示
 set title
 set ambiwidth=double
+" タブの大きさ
 set tabstop=4
 set expandtab
 set shiftwidth=4
@@ -17,3 +18,5 @@ set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
 set paste
+" ヤンクしたらクリップボードに貼り付ける
+set clipboard=unnamedplus
