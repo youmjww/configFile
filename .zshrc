@@ -1,5 +1,3 @@
-#filePath ~/.zshrc
-
 # 基本設定
 # ----------------------------
 # 言語設定
@@ -17,8 +15,6 @@ setopt interactive_comments
 # Ctrl + a とかやりたい
 bindkey -e
 
-# Ctrl + r で履歴さかのぼり
-bindkey "^R" history-incremental-search-backward
 
 # 補完機能
 # ----------------------------
@@ -117,5 +113,7 @@ setopt interactive_comments
 
 # もしかして時のプロンプト指定
 SPROMPT="%{$fg[red]%}%{$suggest%}もしかして %B%r%b %{$fg[red]%}? [y,n,a,e]:${reset_color} "
-
 RPROMPT="%1(v|%F{green}%1v%f|)"
+
+# 普段のプロンプトを黄色にしてpwd@ユーザー名で表示する
+PROMPT="%{$fg[yellow]%}%d@%n: %{$reset_color%}"
