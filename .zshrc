@@ -31,7 +31,7 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 setopt auto_menu
 
 # 高機能なワイルドカード展開を使用する
-setopt extended_glob
+#setopt extended_glob
 
 # 履歴関連
 # ----------------------------
