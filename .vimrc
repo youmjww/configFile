@@ -20,3 +20,5 @@ set wildmenu
 set paste
 " ヤンクしたらクリップボードに貼り付ける
 set clipboard=unnamedplus
+" マウスを有効化
+set mouse=a
