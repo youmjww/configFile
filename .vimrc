@@ -1,6 +1,6 @@
 " プラグインの管理のやつ
 if &compatible
-  set nocompatible
+	set nocompatible
 endif
 
 set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -14,6 +14,25 @@ NeoBundle 'scrooloose/nerdtree'
 " reactのパッケージ
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
+
+
+" eslint
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+
+let g:syntastic_javascript_checkers=['eslint']
+
+" エラー行に sign を表示
+let g:syntastic_enable_signs = 1
+" location list を常に更新
+let g:syntastic_always_populate_loc_list = 0
+" location list を常に表示
+let g:syntastic_auto_loc_list = 0
+" ファイルを開いた時にチェックを実行する
+let g:syntastic_check_on_open = 1
+" :wq で終了する時もチェックする
+let g:syntastic_check_on_wq = 0
+
 
 "PHPのプラグイン
 NeoBundle 'Shougo/neocomplete.vim'
@@ -95,9 +114,6 @@ set clipboard=unnamedplus,autoselect
 " マウスを有効化
 set mouse=a
 
-"スペルチェック
-set spell
-set spelllang=en,cjk
 
 "変換候補で表示される数を増やす
 set pumheight=10
@@ -110,13 +126,11 @@ set hlsearch
 " F3でハイライトを解除する
 noremap <F3> :noh<CR>
 
-" fでディレクトリツリーを開く
+" スペースfでディレクトリツリーを開く
 noremap <Space>f  :NERDTree<CR>
 
-" Hで右端へ移動
+" HLで右端左端へ移動
 noremap <S-h>   ^
-
-" Lで左端へ移動
 noremap <S-l>   $
 
 " KLで上下へ移動
