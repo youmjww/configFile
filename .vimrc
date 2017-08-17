@@ -38,12 +38,13 @@ let g:syntastic_check_on_wq = 0
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'violetyk/neocomplete-php.vim'
 NeoBundle 'mattn/emmet-vim'
+
+
 call neobundle#end()
+
 filetype plugin indent on
 
 NeoBundleCheck
-
-
 
 "--------------------------------------------------------------------------------------------------
 "PHPの設定
@@ -76,9 +77,9 @@ set title
 set ambiwidth=double
 
 " タブ関係
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set smartindent
 
 " tabと空白を表示する
@@ -133,6 +134,9 @@ noremap <Space>f  :NERDTree<CR>
 noremap <S-h>   ^
 noremap <S-l>   $
 
-" KLで上下へ移動
-noremap <S-j>   }
-noremap <S-k>   {
+" swpファイルを生成しないようにする
+set noswapfile
+
+" ｘで文字を削除してもヤンクされないようにする
+noremap PP "0p
+noremap x "_x
