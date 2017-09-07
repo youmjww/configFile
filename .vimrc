@@ -12,10 +12,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 
 " react
-source ~/.vimReactPlugin
+source ~/.vim/.vimReactPlugin
 
 " php
-source ~/.vimPhpPlugin
+source ~/.vim/.vimPhpPlugin
 
 call neobundle#end()
 
@@ -25,7 +25,7 @@ NeoBundleCheck
 
 
 " php
-source ~/.vimPhpConfig
+source ~/.vim/.vimPhpConfig
 "--------------------------------------------------------------------------------------------------
 "基本設定
 
