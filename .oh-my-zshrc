@@ -1,0 +1,18 @@
+
+export ZSH=/Users/yuyaomura/.oh-my-zsh
+
+ZSH_THEME="agnoster"
+
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+export EDITOR='vim'
+
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+#export PGDATA=/usr/local/var/postgres
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PGDATA=/usr/local/var/postgres
