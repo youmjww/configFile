@@ -28,17 +28,15 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle "ctrlpvim/ctrlp.vim"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
+" カラースキーム
+NeoBundle 'tomasiser/vim-code-dark'
+
 call neobundle#end()
 
 filetype plugin indent on
 
 NeoBundleCheck
 
-
-" php
-if filereadable(expand('~/.vim/.vimPhpConfig'))
-	source ~/.vim/.vimPhpConfig
-endif
 
 "--------------------------------------------------------------------------------------------------
 "基本設定
@@ -85,9 +83,6 @@ set backspace=indent,eol,start
 " よくわからんけど、見た目が変わるらしい
 set wildmenu
 
-" ペーストしてもインデントが崩れないようにする
-set paste
-
 " ヤンクしたらクリップボードに貼り付ける
 set clipboard=unnamedplus,autoselect
 
@@ -118,6 +113,9 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ \[ENC=%{&f
 
 " 隠しファイルをデフォルトで表示させる
 let NERDTreeShowHidden = 1
+
+
+colorscheme codedark
 
 " -------------------------------------------------------------------------------------------------
 " ショートカット系
