@@ -107,15 +107,17 @@ set noswapfile
 noremap PP "0p
 noremap x "_x
 
+" -------------------------------------------------------------------------------------------------
+" とりあえず、インストールのタイミングなどでエラー落ちしないように silent! を適用しているやつ
 " Statuslineの設定
-set laststatus=2
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ \[ENC=%{&fileencoding}]%P 
+silent! set laststatus=2
+silent! set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ \[ENC=%{&fileencoding}]%P 
 
 " 隠しファイルをデフォルトで表示させる
-let NERDTreeShowHidden = 1
+silent! let NERDTreeShowHidden = 1
 
-
-colorscheme codedark
+" カラースキーム
+silent! colorscheme codedark
 
 " -------------------------------------------------------------------------------------------------
 " ショートカット系
