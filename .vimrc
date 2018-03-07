@@ -11,6 +11,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " ファイルエクスプローラ
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'rking/ag.vim'
+
 " react
 if filereadable(expand('~/.vim/.vimReactPlugin'))
 	source ~/.vim/.vimReactPlugin
@@ -20,6 +21,9 @@ endif
 if filereadable(expand('~/.vim/.vimPhpPlugin'))
 	source ~/.vim/.vimPhpPlugin
 endif
+
+" スニペットツール
+NeoBundle 'Shougo/neosnippet.vim'
 
 " git
 NeoBundle 'tpope/vim-fugitive'
@@ -40,6 +44,8 @@ NeoBundleCheck
 
 "--------------------------------------------------------------------------------------------------
 "基本設定
+
+
 
 " 行番号の表示
 set number
@@ -143,3 +149,18 @@ nnoremap sh <C-w>h
 " window分割 shortcut key
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
+
+" ファイルタイプによってインデントを変える
+if has("autocmd")
+  "ファイルタイプの検索を有効にする
+  filetype plugin on
+  "ファイルタイプに合わせたインデントを利用
+  filetype indent on
+  "sw=softtabstop, sts=shiftwidth, ts=tabstop, et=expandtabの略
+  autocmd FileType c           setlocal sw=4 sts=4 ts=4 et
+  autocmd FileType html        setlocal sw=2 sts=2 ts=2 et
+  autocmd FileType js          setlocal sw=4 sts=4 ts=4 et
+  autocmd FileType json        setlocal sw=4 sts=4 ts=4 et
+  autocmd FileType css         setlocal sw=2 sts=2 ts=2 et
+  autocmd FileType php  setlocal sw=4 sts=4 ts=4 et
+endif
