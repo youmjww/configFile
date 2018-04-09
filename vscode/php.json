@@ -1,0 +1,59 @@
+{
+	// Place your snippets for php here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+//	Example:
+	"public function": {
+		"prefix": "pubf",
+		"body": [
+			"/**",
+			 "*  ${1:ファンクションの説明}",
+			 "*",
+			 "*  @param ${2:型} $${3:変数名}",
+			 "*/",
+			"public function ${4:ファンクション名}($${3:param})",
+			"{",
+			"    $5",
+			"}"
+		],
+		"description": "public function"
+	},
+
+	"private function": {
+		"prefix": "prif",
+		"body": [
+			"/**",
+			 "*  ${1:ファンクションの説明}",
+			 "*",
+			 "*  @param ${2:型} $${3:変数名}",
+			 "*/",
+			"private function ${4:ファンクション名}($${3:param})",
+			"{",
+			"    $5",
+			"}"
+		],
+		"description": "privte function"
+	},
+
+	"array_dump": {
+		"prefix": "array_dump",
+		"body": [
+			"echo '<pre>';",
+			"print_r($${1:配列});",
+			"echo '</pre>';"
+		],
+		"description": "array_dump"
+	},
+
+	"var_dump": {
+		"prefix": "dump",
+		"body": [
+			"echo '<pre>';",
+			"echo $${1:配列};",
+			"echo '</pre>';"
+		],
+		"description": "echoを少し見やすくしたやつ"
+	},
+}
+
